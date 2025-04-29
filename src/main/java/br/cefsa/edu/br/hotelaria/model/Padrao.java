@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fesa.hotelaria.model;
+package br.cefsa.edu.br.hotelaria.model;
+
+import java.io.Serializable;
+import java.util.UUID;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
@@ -11,16 +14,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.io.Serializable;
-import java.util.UUID;
 
-/**
- *
- * STANDARD(1, "Standard", 1), MASTER(2, "Master", 1.2), DELUXE(3, "Deluxe",
- * 1.4);
- *
- * @author Israel
- */
 @Entity
 @Table(name = "TB_PADRAO", schema = "HOTEL")
 public class Padrao implements Serializable {

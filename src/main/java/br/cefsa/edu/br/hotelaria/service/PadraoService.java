@@ -2,15 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fesa.hotelaria.service;
 
-import br.edu.fesa.hotelaria.model.Padrao;
-import br.edu.fesa.hotelaria.repository.PadraoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package br.cefsa.edu.br.hotelaria.service;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.cefsa.edu.br.hotelaria.model.Padrao;
+import br.cefsa.edu.br.hotelaria.repository.PadraoRepository;
 
 @Service
 public class PadraoService {

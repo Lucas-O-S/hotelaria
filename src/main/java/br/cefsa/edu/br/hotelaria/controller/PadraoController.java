@@ -2,16 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fesa.hotelaria.controller;
+package br.cefsa.edu.br.hotelaria.controller;
 
-import br.edu.fesa.hotelaria.model.Padrao;
-import br.edu.fesa.hotelaria.service.PadraoService;
-import jakarta.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -23,10 +20,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- *
- * @author Israel
- */
+import br.cefsa.edu.br.hotelaria.model.Padrao;
+import br.cefsa.edu.br.hotelaria.service.PadraoService;
+import jakarta.validation.Valid;
+
+
 @Controller
 @RequestMapping("/hotelaria-fesa/padrao")
 public class PadraoController {
@@ -38,10 +36,6 @@ public class PadraoController {
     public String listar(ModelMap model) {
         List<Padrao> padroes = padraoService.findAll();
 
-        List<Padrao> sortedPadroes = padroes.stream()
-                .sorted((padrao1, padrao2) -> padrao1.getNome().compareTo(padrao2.getNome()))
-                .collect(Collectors.toList());
-        model.addAttribute("padroes", sortedPadroes);
         return "/padrao/listar";
     }
 

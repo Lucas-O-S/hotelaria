@@ -1,10 +1,12 @@
-package br.edu.fesa.hotelaria.repository;
+package br.cefsa.edu.br.hotelaria.repository;
 
-import br.edu.fesa.hotelaria.model.Padrao;
 import java.util.Optional;
 import java.util.UUID;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import br.cefsa.edu.br.hotelaria.model.Padrao;
 
 @Repository
 public interface PadraoRepository extends JpaRepository<Padrao, UUID> {

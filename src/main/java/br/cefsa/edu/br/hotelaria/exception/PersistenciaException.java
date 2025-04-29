@@ -2,12 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fesa.hotelaria.exception;
+package br.cefsa.edu.br.hotelaria.exception;
 
-/**
- *
- * @author pro21001967
- */
+
 public class PersistenciaException extends Exception {
 
     public PersistenciaException() {
