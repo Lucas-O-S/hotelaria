@@ -5,6 +5,7 @@
 package br.cefsa.edu.br.hotelaria.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.UUID;
 
 import jakarta.persistence.Basic;
@@ -29,17 +30,17 @@ public class Padrao implements Serializable {
     @Column(name = "NOME", nullable = false, unique = true, length = 20)
     private String nome;
     @Column(name = "PERCENTUAL", nullable = false)
-    private double percentual;
+    private BigDecimal percentual;
 
     public Padrao() {
     }
 
-    public Padrao(String nome, double percentual) {
+    public Padrao(String nome, BigDecimal percentual) {
         this.nome = nome;
         this.percentual = percentual;
     }
 
-    public Padrao(UUID idPadrao, String nome, double percentual) {
+    public Padrao(UUID idPadrao, String nome, BigDecimal percentual) {
         this.idPadrao = idPadrao;
         this.nome = nome;
         this.percentual = percentual;
@@ -61,11 +62,11 @@ public class Padrao implements Serializable {
         this.nome = nome;
     }
 
-    public double getPercentual() {
+    public BigDecimal getPercentual() {
         return percentual;
     }
 
-    public void setPercentual(double percentual) {
+    public void setPercentual(BigDecimal percentual) {
         this.percentual = percentual;
     }
 }
