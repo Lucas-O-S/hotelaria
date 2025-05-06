@@ -4,6 +4,7 @@
  */
 package br.cefsa.edu.br.hotelaria.controller;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -89,10 +90,10 @@ public class PadraoController {
     public String carregar() {
 
         List<Padrao> padroes = Arrays.asList(
-                new Padrao("Standard", 1.2),
-                new Padrao("Master", 1.4),
-                new Padrao("Deluxe", 1.8),
-                new Padrao("Executiva", 1.2)
+                new Padrao("Standard", BigDecimal.valueOf(1.2)),
+                new Padrao("Master",BigDecimal.valueOf(1.4)),
+                new Padrao("Deluxe", BigDecimal.valueOf(1.8)),
+                new Padrao("Executiva",BigDecimal.valueOf(1.6))
         );
 
         for (Padrao padrao : padroes) {

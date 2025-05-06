@@ -16,9 +16,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.transaction.Status;
 import jakarta.validation.constraints.NotNull;
-
 @Entity
 @Table(name = "TB_INDISPONIBILIDADE", schema = "HOTEL")
 public class Indisponibilidade implements Serializable {
